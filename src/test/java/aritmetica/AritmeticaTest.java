@@ -19,26 +19,26 @@ public class AritmeticaTest {
 		aritmetica = null;
 	}
 
-	@Test
+	@org.junit.jupiter.api.Test
 	public void testSuma() {
 //        Aritmetica aritmetica = new Aritmetica();
 		assertEquals(2, aritmetica.suma(1, 1));
 		assertThat(aritmetica, notNullValue());
 		assertThat(aritmetica.suma(2, 3), is(5.0f));    }
 
-	@Test
+	@org.junit.jupiter.api.Test
 	public void testResta() {
 //        Aritmetica aritmetica = new Aritmetica();
 		assertEquals(3, aritmetica.resta(4, 1));
 	}
 
-	@Test
+	@org.junit.jupiter.api.Test
 	public void testMultiplicacion() {
 //        Aritmetica aritmetica = new Aritmetica();
 		assertEquals(6, aritmetica.multiplicacion(2, 3));
 	}
 
-	@Test
+	@org.junit.jupiter.api.Test
 	public void testDivision() {
 //        Aritmetica aritmetica = new Aritmetica();
 		assertEquals(5, aritmetica.division(10, 2));

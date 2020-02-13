@@ -30,6 +30,5 @@ public class AritmeticaRestaParametrizadaTest {
     @MethodSource("datos")
     public void restasTest(float minuendo, float sustraendo, float resultado) {
         assertThat(aritmetica.resta(minuendo, sustraendo), is(resultado));
-
     }
 }
