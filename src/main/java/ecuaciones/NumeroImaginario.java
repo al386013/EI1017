@@ -1,5 +1,6 @@
 package ecuaciones;
 
+// todo Esta clase no la usáis para los tests.
 public class NumeroImaginario {
     private float parteReal;
     private float parteImag;
@@ -21,6 +22,8 @@ public class NumeroImaginario {
         return parteImag;
     }
 
+    // todo Cuidado con los acentos y letras que no sean inglesas.
+    // todo Si no lo necesitáis, no lo defináis.
     public float getMódulo() {
         return (float)Math.sqrt(Math.pow(parteReal, 2) + Math.pow(parteImag, 2));
     }

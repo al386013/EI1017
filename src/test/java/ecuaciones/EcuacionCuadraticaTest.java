@@ -2,6 +2,7 @@ package ecuaciones;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 
@@ -21,7 +22,7 @@ public class EcuacionCuadraticaTest {
 		conjunto.clear();
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test // todo La anotación de JUnit 5 es la del paquete jupiter
 	public void ecuacionLinealTest() {
 		EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica(0, 1, 1); // x + 1 = 0
 		conjunto.add(-1.0f);
@@ -33,14 +34,14 @@ public class EcuacionCuadraticaTest {
 		assertThat(ecuacionCuadratica.resolver(), is(conjunto));
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test
 	public void bycIgualACero() {
 		EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica(2, 0, 0); // 2x^2 = 0
 		conjunto.add(0.0f);
 		assertThat(ecuacionCuadratica.resolver(), is(conjunto));
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test
 	public void bCeroCNegativo() {
 		EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica(2, 0, -18); // 2x^2 - 18 = 0
 		conjunto.add(3.0f);
@@ -48,7 +49,7 @@ public class EcuacionCuadraticaTest {
 		assertThat(ecuacionCuadratica.resolver(), is(conjunto));
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test
 	public void bCeroCPositivo() {
 		//parte real igual a cero
 		EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica(1, 0, 64); // x^2 + 64 = 0
@@ -65,7 +66,7 @@ public class EcuacionCuadraticaTest {
 		assertThat(ecuacionCuadratica.resolver(), is(conjunto));
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test
 	public void terminoIndependienteCero() {
 		EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica(4, -2, 0); // 4x^2 - 2x = 0
 		conjunto.add(0.0f);
@@ -79,7 +80,7 @@ public class EcuacionCuadraticaTest {
 		assertThat(ecuacionCuadratica.resolver(), is(conjunto));
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test
 	public void discriminantePositivo() {
 		EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica(2, -7, 3); // 2x^2 - 7x + 3 = 0
 		conjunto.add(3.0f);
@@ -93,14 +94,15 @@ public class EcuacionCuadraticaTest {
 		assertThat(ecuacionCuadratica.resolver(), is(conjunto));
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test
 	public void discriminanteCero() { //solucion doble
 		EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica(1, -2, 1); // x^2 - 2x + 1 = 0
 		conjunto.add(1.0f);
 		assertThat(ecuacionCuadratica.resolver(), is(conjunto));
 	}
 
-	@org.junit.jupiter.api.Test
+	// todo No tiene soluciones imaginarias ;)
+	@Test
 	public void discriminanteNegativo() { //numero imaginario
 		EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica(1, -2, 1); // x^2 - 2x + 1 = 0
 		conjunto.add(1.0f);

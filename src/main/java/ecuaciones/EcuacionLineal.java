@@ -14,6 +14,7 @@ public class EcuacionLineal {
             else return -b / a;
         }
         else
+            // todo Ok.
             throw new ArithmeticException();
     }
 }
